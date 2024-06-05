@@ -1,0 +1,30 @@
+
+
+#project_div{
+    width: 100%;
+    background-color:white;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+
+    h1{
+        font-family:Helvetica;
+        margin: 1rem 0px;
+        text-align: center  ;
+        color:  #363333;
+    }
+
+    .project{
+        background-color: white;
+        height: auto;
+        width: auto;
+    }
+    @media screen and (max-width:431px) {
+        #project_title{
+            text-align: left;
+            padding-left: 1em;
+        }
+    }
+}
+
