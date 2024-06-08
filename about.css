@@ -1,0 +1,47 @@
+#about_div{
+    z-index: 2;
+    background-color: #363333;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    
+    h1{
+        font-family:Helvetica;
+        text-align: center;
+        color: white;
+    }
+    #prog_lang{
+        /* background-color: #272121; */
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        width: 100%;
+        height: auto;
+    }
+    #prog_lang i{
+        color: white;
+        font-size: calc(1rem + 5vw);
+    }
+    .techstack{
+        max-width: 5%;
+        width: 100%;
+        height: auto;
+    }
+    
+    @media screen and (max-width:431px) {
+        #techstack_title{
+            text-align: left;
+            padding-left: 1em;
+        }
+    }
+    /* @media screen and (max-width:1025px) {
+        #techstack_title{
+            padding-left: 1em;
+        }
+    } */
+}

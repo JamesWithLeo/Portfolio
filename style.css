@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    overflow-y: scroll; /* Add the ability to scroll */
+    background-color:#363333;
+
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+#section__header, #section__homepage,
+#section__project, #section__about { 
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width:1440px) {
+    #header, #homePage, #project_div, #about_div {
+        max-width:1440px;
+        max-height: 1440px;
+    }
+}
