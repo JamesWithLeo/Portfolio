@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b188faee.css",
-    "main.js": "/static/js/main.452188ce.js",
-    "static/media/me.jpg": "/static/media/me.9ccfb08888dbaff8c357.jpg",
-    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
-    "static/media/Silkscreen-Regular.ttf": "/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
-    "index.html": "/index.html",
-    "main.b188faee.css.map": "/static/css/main.b188faee.css.map",
-    "main.452188ce.js.map": "/static/js/main.452188ce.js.map"
+    "main.css": "/Portfolio/static/css/main.e148ae24.css",
+    "main.js": "/Portfolio/static/js/main.f360b1f0.js",
+    "static/media/me.jpg": "/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
+    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
+    "static/media/Silkscreen-Regular.ttf": "/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
+    "index.html": "/Portfolio/index.html",
+    "main.e148ae24.css.map": "/Portfolio/static/css/main.e148ae24.css.map",
+    "main.f360b1f0.js.map": "/Portfolio/static/js/main.f360b1f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b188faee.css",
-    "static/js/main.452188ce.js"
+    "static/css/main.e148ae24.css",
+    "static/js/main.f360b1f0.js"
   ]
 }
