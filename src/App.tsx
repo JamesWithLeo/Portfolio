@@ -35,7 +35,6 @@ function App() {
               className="h-max w-max"
               onClick={() => {
                 theme.setToDark();
-                console.log("light to dark");
                 document.body.className = "dark";
               }}
             >
@@ -49,7 +48,6 @@ function App() {
               className="h-max w-max"
               onClick={() => {
                 theme.setToLight();
-                console.log("dark to light");
                 document.body.className = "light";
               }}
             >
@@ -68,19 +66,19 @@ function App() {
             id="socialMedias"
             className="flex items-center gap-8 md:flex-col"
           >
-            <a href="https://facebook.com">
+            <a href="https://github.com/JamesWithLeo">
               <FontAwesomeIcon
                 icon={faGithub}
                 className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
               ></FontAwesomeIcon>
             </a>
-            <a href="https://facebook.com">
+            <a href="https://www.facebook.com/JAMES.ocampoGI">
               <FontAwesomeIcon
                 icon={faFacebook}
                 className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
               />
             </a>
-            <a href="https://facebook.com">
+            <a href="https://www.linkedin.com/in/james-leo-ocampo-888686307/">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
