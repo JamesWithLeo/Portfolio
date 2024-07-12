@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/JamesWithLeo/Portfolio/static/css/main.ca1ec0f2.css",
-    "main.js": "/JamesWithLeo/Portfolio/static/js/main.91124df7.js",
-    "static/media/me.jpg": "/JamesWithLeo/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
-    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/JamesWithLeo/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
-    "static/media/Silkscreen-Regular.ttf": "/JamesWithLeo/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
-    "index.html": "/JamesWithLeo/Portfolio/index.html",
-    "main.ca1ec0f2.css.map": "/JamesWithLeo/Portfolio/static/css/main.ca1ec0f2.css.map",
-    "main.91124df7.js.map": "/JamesWithLeo/Portfolio/static/js/main.91124df7.js.map"
+    "main.css": "/static/css/main.b188faee.css",
+    "main.js": "/static/js/main.cfcc4030.js",
+    "static/media/me.jpg": "/static/media/me.9ccfb08888dbaff8c357.jpg",
+    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
+    "static/media/Silkscreen-Regular.ttf": "/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
+    "index.html": "/index.html",
+    "main.b188faee.css.map": "/static/css/main.b188faee.css.map",
+    "main.cfcc4030.js.map": "/static/js/main.cfcc4030.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca1ec0f2.css",
-    "static/js/main.91124df7.js"
+    "static/css/main.b188faee.css",
+    "static/js/main.cfcc4030.js"
   ]
 }
