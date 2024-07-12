@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: "Silkscreen";
+    src: url(./assets/fonts/Silkscreen/Silkscreen-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "Gluten";
+    src: url(./assets//fonts/Gluten/Gluten-VariableFont_slnt\,wght.ttf);
+  }
+}
