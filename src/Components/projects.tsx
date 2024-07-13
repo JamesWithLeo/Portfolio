@@ -25,8 +25,8 @@ export default function Project({ title, content, duration }: projectTypeface) {
       onClick={() => {
         console.log("Project!");
       }}
-      className="dark:focus:bg-dark600 dark:hover:bg-dark600 bg-light100 group flex h-[510px] max-h-max
-        w-80 flex-col justify-between gap-4 px-4 py-5 shadow-lg outline-dashed outline-darkPrimary delay-200 duration-200 ease-linear hover:scale-[1.03] hover:bg-white focus:scale-[1.03] focus:bg-white focus:outline dark:rounded-md dark:bg-dark900 dark:shadow-xl dark:shadow-stone-800"
+      className="dark:focus:bg-dark600 dark:hover:bg-dark600 bg-light100 group flex sm:h-[510px] max-h-max sm:max-w-80 w-[90%]
+        md:w-80 flex-col justify-between gap-4 px-4 py-5 shadow-lg outline-dashed outline-darkPrimary delay-200 duration-200 ease-linear hover:scale-[1.03] hover:bg-white focus:scale-[1.03] focus:bg-white focus:outline dark:rounded-md dark:bg-dark900 dark:shadow-xl dark:shadow-stone-800"
     >
       <div className="h-1/2 w-full bg-stone-100 delay-200 duration-200 ease-linear" />
       <div className=" flex h-1/2 w-full flex-col justify-between gap-2 text-darkPrimary">
@@ -35,7 +35,7 @@ export default function Project({ title, content, duration }: projectTypeface) {
             <h1 className="h-max w-auto font-[silkscreen] ">{title}</h1>
             <div className="h-px w-auto bg-darkPrimary dark:bg-white" />
           </div>
-          <p className=" mb-2 w-full text-left font-mono text-sm font-light text-darkPrimary dark:text-stone-400">
+          <p className="mb-2 w-full text-left font-mono text-sm font-light text-darkPrimary dark:text-stone-400">
             {content}
           </p>
         </div>

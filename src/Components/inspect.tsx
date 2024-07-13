@@ -5,7 +5,7 @@ type InspectFacetype = {
 export default function Inspect({ name }: InspectFacetype) {
   return (
     <>
-      <div className="absolute left-[60%] top-[20%] flex h-auto w-auto flex-col gap-4 rounded bg-white p-2 shadow-2xl">
+      <div className="absolute md:left-[60%] top-[20%] md:top-[30%] lg:top-[20%] flex h-auto w-auto flex-col gap-4 rounded bg-white p-2 shadow-2xl">
         <div className="flex gap-2">
           <div className="flex ">
             <h1 className="text-xs font-bold text-purple-700">{name}</h1>

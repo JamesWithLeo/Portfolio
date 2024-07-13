@@ -1,7 +1,7 @@
 export default function AboutMe() {
   return (
     <>
-      <p className="h-full text-justify indent-8 text-xs leading-normal text-darkPrimary md:text-sm md:leading-loose lg:text-base lg:leading-loose dark:text-white ">
+      <p className="h-full text-justify indent-8  leading-normal text-darkPrimary text-sm md:leading-loose lg:text-base lg:leading-loose dark:text-white ">
         I am James, a self-taught programmer forced to study hard to achieve my
         goals. Just like others, I love coffee and{" "}
         <span className="cursor-default underline">music</span> because they

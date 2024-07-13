@@ -26,9 +26,9 @@ function App() {
   const [hoverRateMe, setHoverRateMe] = useState<Boolean>(true);
   return (
     <div className="bg-light box-border flex h-auto w-full flex-col items-center dark:bg-darkPrimary">
-      <header className="bg-light fixed top-0 z-20 flex h-16 w-full flex-col items-center px-4 shadow dark:bg-dark900">
+      <header className="bg-light sticky top-0 z-20 flex h-16 w-full flex-col items-center px-4 shadow dark:bg-dark900">
         <div className="flex h-full w-full max-w-7xl items-center justify-between ">
-          <div>Logo</div>
+          <div></div>
           {theme.theme === "light" ? (
             <button
               className="h-max w-max"
@@ -59,8 +59,8 @@ function App() {
         </div>
       </header>
 
-      <main className="flex h-screen max-h-[1000px] w-full max-w-7xl flex-col-reverse items-center md:flex-row dark:bg-darkPrimary">
-        <div className="z-10 flex h-max grid-cols-5 flex-col-reverse items-center justify-center gap-8 py-8 md:grid md:w-1/2 lg:pl-4">
+      <main className="flex lg:h-screen max-h-[1000px] w-full max-w-7xl flex-col-reverse items-center md:flex-row dark:bg-darkPrimary">
+        <div className="z-10 flex h-max grid-cols-5 flex-col-reverse items-center gap-8 py-8 md:grid md:w-1/2 lg:pl-4">
           <div
             id="socialMedias"
             className="flex items-center gap-8 md:flex-col"
@@ -68,19 +68,19 @@ function App() {
             <a href="https://github.com/JamesWithLeo">
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
+                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
               ></FontAwesomeIcon>
             </a>
             <a href="https://www.facebook.com/JAMES.ocampoGI">
               <FontAwesomeIcon
                 icon={faFacebook}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
+                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
               />
             </a>
             <a href="https://www.linkedin.com/in/james-leo-ocampo-888686307/">
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 sm:text-2xl dark:text-white"
+                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
               />
             </a>
           </div>
@@ -224,11 +224,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="z-10 flex h-max w-full flex-col items-center justify-center md:h-screen md:w-1/2">
+        <div className="z-10 flex h-max w-full flex-col items-center justify-center md:h-screen md:w-1/2 sm:pt-16 md:pt-0">
           <img
             src={me}
             alt="James Handsome in formal"
-            className="shadow-[rgba(0, 0, 0, 0.56) 0px 22px 70px 4px] h-auto border-stone-100 shadow delay-200 duration-200 ease-linear md:w-72 md:border-[16px] lg:w-80 dark:shadow-stone-900 dark:md:rounded-full dark:md:border-0"
+            className="shadow-[rgba(0, 0, 0, 0.56) 0px 22px 70px 4px] h-auto border-stone-100 shadow delay-200 duration-200 ease-linear md:w-72 md:border-[16px] lg:w-80 dark:shadow-stone-900 dark:md:rounded-full dark:md:border-0 sm:max-w-96"
             onMouseEnter={() => {
               setHoverHero(true);
             }}
@@ -268,7 +268,7 @@ function App() {
         className="flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-8 pb-32 pt-16"
         id="projects"
       >
-        <h1 className="w-full p-4 font-[silkscreen] text-4xl text-darkPrimary lg:px-12 dark:text-white ">
+        <h1 className="w-full p-4 font-[silkscreen] text-2xl md:text-3xl lg:text-4xl text-darkPrimary lg:px-12 dark:text-white ">
           Projects {">"}
         </h1>
         <Project
@@ -292,11 +292,11 @@ function App() {
       </div>
 
       <div className="flex h-max w-full max-w-7xl flex-col items-center justify-center gap-y-8 pb-32 pt-16  dark:bg-darkPrimary">
-        <h1 className="w-full p-4 font-[silkscreen] text-4xl text-darkPrimary lg:px-12 dark:text-white">
+        <h1 className="w-full p-4 font-[silkscreen] text-darkPrimary lg:px-12 dark:text-white text-2xl md:text-3xl lg:text-4xl">
           About Me {">"}
         </h1>
         {/* bg-[#8294C4] */}
-        <div className="flex h-full w-3/4 flex-col  gap-8 border border-stone-200 bg-stone-50 p-8 text-darkPrimary shadow-inner lg:px-8 dark:border-none dark:bg-darkPrimary dark:text-white">
+        <div className="flex h-full md:w-[90%] flex-col gap-8 border border-stone-200 bg-stone-50 p-8 text-darkPrimary shadow-inner lg:px-8 dark:border-none dark:bg-darkPrimary dark:text-white">
           <div className="h-0.5 w-3/4 dark:bg-red-500 "></div>
           <AboutMe />
           <div className="h-0.5 w-3/4 self-end dark:bg-red-500"></div>
@@ -309,7 +309,7 @@ function App() {
         className="flex h-max w-full flex-row items-center justify-center gap-4 bg-darkPrimary p-8 delay-200  duration-200 ease-linear lg:px-32 dark:bg-white dark:shadow-inner dark:shadow-darkPrimary"
         id="contact"
       >
-        <div className=" flex w-full max-w-7xl delay-200 duration-200 ease-linear ">
+        <div className=" flex w-full max-w-7xl delay-200 duration-200 ease-linear flex-col md:flex-row gap-8">
           <div className="flex w-1/3 flex-col gap-2 self-baseline delay-200 duration-200 ease-linear ">
             <h1 className="text-xl font-bold text-stone-200 dark:text-darkPrimary">
               Add me on social media!
