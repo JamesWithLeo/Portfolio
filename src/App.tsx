@@ -19,10 +19,9 @@ import Rate from "./Components/rate";
 import EmailMe from "./Components/emailMe";
 import AboutMe from "./Components/aboutMe";
 import Project from "./Components/projects";
-import { useTheme } from "./Components/themeContext";
+import { ThemeConsumer } from "./Components/themeContext";
 function App() {
-  const theme = useTheme();
-  // const [theme, setTheme] = useState<Boolean>(true);
+  const theme = ThemeConsumer();
   const [hoverHero, setHoverHero] = useState<Boolean>(false);
   const [hoverRateMe, setHoverRateMe] = useState<Boolean>(true);
   return (
