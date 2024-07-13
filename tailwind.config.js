@@ -18,6 +18,18 @@ module.exports = {
         light: '#f5f5f5',
         light100: '#efefef'
       }
+    }, keyframes: {
+      slide: {
+        '0%': {
+          transform: 'translateX(0)'
+        },
+        '100%': {
+          transform: 'translateX(27rem)'
+        }
+      }
+    }
+    , animation: {
+      slide: 'slide 3s ease 0s normal forwards'
     },
 
     plugins: [],

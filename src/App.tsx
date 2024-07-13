@@ -261,7 +261,7 @@ function App() {
             <div className="h-3 w-3 rounded-sm bg-white shadow shadow-darkPrimary active:shadow-inner active:shadow-darkPrimary dark:rounded-full dark:bg-darkPrimary dark:shadow-white dark:active:shadow-white" />
           </a>
         </div>
-        {theme.theme === "dark" ? <SvgComponent /> : null}
+        {theme.theme === "light" ? null : <SvgComponent/>}
       </main>
 
       <div
