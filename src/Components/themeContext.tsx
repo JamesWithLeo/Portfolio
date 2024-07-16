@@ -1,10 +1,17 @@
 import * as React from "react";
 
-const ThemeContext = React.createContext(null)
+type themeType = {
+  theme: string;
+  setToDark: () => void;
+  setToLight: () => void;
+} | null;
+export const ThemeContext = React.createContext<themeType>(null);
 
 export const useTheme = () => {
-  
-  const [theme, setTheme] = React.useState<'dark'|'light'>(localStorage.theme ?? 'light');
+  const [theme, setTheme] = React.useState<"light" | "dark">(
+    localStorage.theme ?? "light",
+  );
+  document.getElementById("root").className = theme;
 
   function setToDark(): void {
     localStorage.setItem("theme", "dark");
@@ -16,13 +23,14 @@ export const useTheme = () => {
     setTheme("light");
   }
   return { theme, setToLight, setToDark };
-}
-export function ThemeProvider({children}){
-  const theme = useTheme()
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+};
+export function ThemeProvider({ children }) {
+  const theme = useTheme();
+  return (
+    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+  );
 }
 
-
-export function ThemeConsumer(){
-  return React.useContext(ThemeContext)
+export function ThemeConsumer() {
+  return React.useContext(ThemeContext);
 }

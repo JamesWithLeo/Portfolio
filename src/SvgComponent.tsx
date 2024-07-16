@@ -1,8 +1,9 @@
-import * as React from "react"
+import * as React from "react";
 
 function SvgComponent(props) {
   return (
-    <svg className="absolute h-screen z-0 max-h-[1000px] w-full left-0 hidden md:block"
+    <svg
+      className="absolute left-0 z-0 hidden h-screen max-h-[1000px] w-full md:block"
       xmlns="http://www.w3.org/2000/svg"
       width={2880}
       height={1440}
@@ -49,7 +50,7 @@ function SvgComponent(props) {
         </mask>
       </defs>
     </svg>
-  )
+  );
 }
 
-export default SvgComponent
+export default SvgComponent;

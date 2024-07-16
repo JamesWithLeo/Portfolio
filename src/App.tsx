@@ -20,20 +20,22 @@ import EmailMe from "./Components/emailMe";
 import AboutMe from "./Components/aboutMe";
 import Project from "./Components/projects";
 import { ThemeConsumer } from "./Components/themeContext";
+import Name from "./Components/Name";
 function App() {
   const theme = ThemeConsumer();
   const [hoverHero, setHoverHero] = useState<Boolean>(false);
   const [hoverRateMe, setHoverRateMe] = useState<Boolean>(true);
   return (
-    <div className="bg-light box-border flex h-auto w-full flex-col items-center dark:bg-darkPrimary">
-      <header className="bg-light sticky top-0 z-20 flex h-16 w-full flex-col items-center px-4 shadow dark:bg-dark900">
+    <div className="box-border flex h-auto w-full flex-col items-center bg-light dark:bg-darkPrimary">
+      <header className="sticky top-0 z-20 flex h-16 w-full flex-col items-center bg-light px-4 shadow dark:bg-dark900">
         <div className="flex h-full w-full max-w-7xl items-center justify-between ">
-          <div></div>
-          {theme.theme === "light" ? (
+          <>
+            <div></div>
             <button
-              className="h-max w-max"
+              className="h-max w-max dark:hidden"
               onClick={() => {
                 theme.setToDark();
+                console.log(theme.theme);
                 document.body.className = "dark";
               }}
             >
@@ -42,11 +44,11 @@ function App() {
                 className="h-7 w-7 text-darkPrimary"
               />
             </button>
-          ) : (
             <button
-              className="h-max w-max"
+              className="hidden h-max w-max dark:block"
               onClick={() => {
                 theme.setToLight();
+                console.log(theme.theme);
                 document.body.className = "light";
               }}
             >
@@ -55,11 +57,14 @@ function App() {
                 className="h-7 w-7 text-white"
               />
             </button>
-          )}
+          </>
         </div>
       </header>
 
-      <main className="flex lg:h-screen max-h-[1000px] w-full max-w-7xl flex-col-reverse items-center md:flex-row dark:bg-darkPrimary">
+      <div className="z-10 hidden bg-transparent dark:block">
+        {theme.theme === "light" ? null : <SvgComponent />}
+      </div>
+      <main className="flex max-h-[1000px] w-full max-w-7xl flex-col-reverse items-center md:flex-row lg:h-screen dark:bg-darkPrimary">
         <div className="z-10 flex h-max grid-cols-5 flex-col-reverse items-center gap-8 py-8 md:grid md:w-1/2 lg:pl-4">
           <div
             id="socialMedias"
@@ -68,167 +73,32 @@ function App() {
             <a href="https://github.com/JamesWithLeo">
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
+                className="text-2xl text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 dark:text-white"
               ></FontAwesomeIcon>
             </a>
             <a href="https://www.facebook.com/JAMES.ocampoGI">
               <FontAwesomeIcon
                 icon={faFacebook}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
+                className="text-2xl text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 dark:text-white"
               />
             </a>
             <a href="https://www.linkedin.com/in/james-leo-ocampo-888686307/">
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 text-2xl dark:text-white"
+                className="text-2xl text-darkPrimary delay-200 duration-200 ease-linear hover:scale-110 dark:text-white"
               />
             </a>
           </div>
 
           <div className="col-span-4 flex flex-col gap-2">
-            <div className="flex justify-center gap-4 md:justify-start">
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  H
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  L
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  L
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  O
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-                  ,
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  I
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  A
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  M
-                </h1>
-              </div>
-            </div>
-            <div className="flex justify-center gap-4 md:justify-start">
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-5xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  J
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  A
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  M
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  S
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  .
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:hidden md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  L
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  O
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:hidden md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  O
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  C
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  A
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  M
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  P
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  O
-                </h1>
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-4 md:justify-start">
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="hover:-translate-y-2] w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  A
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  W
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  B
-                </h1>
-              </div>
-              <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  D
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  V
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  L
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  O
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  P
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  E
-                </h1>
-                <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-                  R
-                </h1>
-              </div>
-            </div>
+            <Name />
           </div>
         </div>
-        <div className="z-10 flex h-max w-full flex-col items-center justify-center md:h-screen md:w-1/2 sm:pt-16 md:pt-0">
+        <div className="z-10 flex h-max w-full flex-col items-center justify-center sm:pt-16 md:h-screen md:w-1/2 md:pt-0">
           <img
             src={me}
             alt="James Handsome in formal"
-            className="shadow-[rgba(0, 0, 0, 0.56) 0px 22px 70px 4px] h-auto border-stone-100 shadow delay-200 duration-200 ease-linear md:w-72 md:border-[16px] lg:w-80 dark:shadow-stone-900 dark:md:rounded-full dark:md:border-0 sm:max-w-96"
+            className="shadow-[rgba(0, 0, 0, 0.56) 0px 22px 70px 4px] h-auto border-stone-100 shadow delay-200 duration-200 ease-linear sm:max-w-96 md:w-72 md:border-[16px] lg:w-80 dark:shadow-stone-900 dark:md:rounded-full dark:md:border-0"
             onMouseEnter={() => {
               setHoverHero(true);
             }}
@@ -261,14 +131,18 @@ function App() {
             <div className="h-3 w-3 rounded-sm bg-white shadow shadow-darkPrimary active:shadow-inner active:shadow-darkPrimary dark:rounded-full dark:bg-darkPrimary dark:shadow-white dark:active:shadow-white" />
           </a>
         </div>
-        {theme.theme === "light" ? null : <SvgComponent/>}
+        {theme.theme === "light" ? null : (
+          <div className="absolute top-0 z-20 hidden bg-transparent dark:block">
+            <SvgComponent />
+          </div>
+        )}
       </main>
 
       <div
         className="flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-8 pb-32 pt-16"
         id="projects"
       >
-        <h1 className="w-full p-4 font-[silkscreen] text-2xl md:text-3xl lg:text-4xl text-darkPrimary lg:px-12 dark:text-white ">
+        <h1 className="w-full p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white ">
           Projects {">"}
         </h1>
         <Project
@@ -292,11 +166,11 @@ function App() {
       </div>
 
       <div className="flex h-max w-full max-w-7xl flex-col items-center justify-center gap-y-8 pb-32 pt-16  dark:bg-darkPrimary">
-        <h1 className="w-full p-4 font-[silkscreen] text-darkPrimary lg:px-12 dark:text-white text-2xl md:text-3xl lg:text-4xl">
+        <h1 className="w-full p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white">
           About Me {">"}
         </h1>
         {/* bg-[#8294C4] */}
-        <div className="flex h-full md:w-[90%] flex-col gap-8 border border-stone-200 bg-stone-50 p-8 text-darkPrimary shadow-inner lg:px-8 dark:border-none dark:bg-darkPrimary dark:text-white">
+        <div className="flex h-full flex-col gap-8 border border-stone-200 bg-stone-50 p-8 text-darkPrimary shadow-inner md:w-[90%] lg:px-8 dark:border-none dark:bg-darkPrimary dark:text-white">
           <div className="h-0.5 w-3/4 dark:bg-red-500 "></div>
           <AboutMe />
           <div className="h-0.5 w-3/4 self-end dark:bg-red-500"></div>
@@ -309,7 +183,7 @@ function App() {
         className="flex h-max w-full flex-row items-center justify-center gap-4 bg-darkPrimary p-8 delay-200  duration-200 ease-linear lg:px-32 dark:bg-white dark:shadow-inner dark:shadow-darkPrimary"
         id="contact"
       >
-        <div className=" flex w-full max-w-7xl delay-200 duration-200 ease-linear flex-col md:flex-row gap-8">
+        <div className=" flex w-full max-w-7xl flex-col gap-8 delay-200 duration-200 ease-linear md:flex-row">
           <div className="flex w-1/3 flex-col gap-2 self-baseline delay-200 duration-200 ease-linear ">
             <h1 className="text-xl font-bold text-stone-200 dark:text-darkPrimary">
               Add me on social media!
