@@ -1,5 +1,6 @@
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import todoImg from "./assets/images/TodoApp-ss1.png";
 import {
   faGithub,
   faFacebook,
@@ -148,17 +149,28 @@ function App() {
         <Project
           title={"Mel Bakes"}
           duration="3 weeks"
+          repo="https://github.com/JamesWithLeo/Mel-Bakes"
           content={
             "My first Ever E-commerce website created using MongoDb, express, React & Node JS, This project is inspired by my girlfriend who loves to bake and eat cupcakes."
           }
         />
         <Project
+          title="Todo"
+          repo="https://github.com/JamesWithLeo/todo-app"
+          liveDemo="https://todo-j15i.onrender.com/"
+          duration="2 day"
+          content="Basic MERN Todo web application"
+          appImg={todoImg}
+        />
+        <Project
           title={"Noter"}
+          repo="https://github.com/JamesWithLeo/NoterApp_Csharp_Wpf"
           content={"Note pad like Application, created using C# WPS."}
           duration="1 week"
         />
         <Project
           title={"School Crud Sys."}
+          repo="https://github.com/JamesWithLeo/Python-School-Management-System"
           content={
             "Management System created using Python with Tkinter for ui, has CRUD operations. This application is inspired by my college school."
           }
