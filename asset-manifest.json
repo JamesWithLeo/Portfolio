@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a80f117c.css",
-    "main.js": "/Portfolio/static/js/main.64c325e7.js",
+    "main.css": "/Portfolio/static/css/main.ab294ff9.css",
+    "main.js": "/Portfolio/static/js/main.e95ee97f.js",
+    "static/media/melhotelApp-ss1.png": "/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
+    "static/media/melbakeApp-ss1.png": "/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
     "static/media/me.jpg": "/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
     "static/media/Gluten-VariableFont_slnt,wght.ttf": "/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
     "static/media/Silkscreen-Regular.ttf": "/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
     "static/media/TodoApp-ss1.png": "/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
     "index.html": "/Portfolio/index.html",
-    "main.a80f117c.css.map": "/Portfolio/static/css/main.a80f117c.css.map",
-    "main.64c325e7.js.map": "/Portfolio/static/js/main.64c325e7.js.map"
+    "main.ab294ff9.css.map": "/Portfolio/static/css/main.ab294ff9.css.map",
+    "main.e95ee97f.js.map": "/Portfolio/static/js/main.e95ee97f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a80f117c.css",
-    "static/js/main.64c325e7.js"
+    "static/css/main.ab294ff9.css",
+    "static/js/main.e95ee97f.js"
   ]
 }
