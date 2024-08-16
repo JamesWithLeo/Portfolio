@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.ab294ff9.css",
-    "main.js": "/Portfolio/static/js/main.e95ee97f.js",
+    "main.js": "/Portfolio/static/js/main.894c04b8.js",
     "static/media/melhotelApp-ss1.png": "/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
     "static/media/melbakeApp-ss1.png": "/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
     "static/media/me.jpg": "/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
@@ -10,10 +10,10 @@
     "static/media/TodoApp-ss1.png": "/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
     "index.html": "/Portfolio/index.html",
     "main.ab294ff9.css.map": "/Portfolio/static/css/main.ab294ff9.css.map",
-    "main.e95ee97f.js.map": "/Portfolio/static/js/main.e95ee97f.js.map"
+    "main.894c04b8.js.map": "/Portfolio/static/js/main.894c04b8.js.map"
   },
   "entrypoints": [
     "static/css/main.ab294ff9.css",
-    "static/js/main.e95ee97f.js"
+    "static/js/main.894c04b8.js"
   ]
 }
