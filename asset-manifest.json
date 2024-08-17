@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ab294ff9.css",
-    "main.js": "/Portfolio/static/js/main.894c04b8.js",
-    "static/media/melhotelApp-ss1.png": "/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
-    "static/media/melbakeApp-ss1.png": "/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
-    "static/media/me.jpg": "/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
-    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
-    "static/media/Silkscreen-Regular.ttf": "/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
-    "static/media/TodoApp-ss1.png": "/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
-    "index.html": "/Portfolio/index.html",
-    "main.ab294ff9.css.map": "/Portfolio/static/css/main.ab294ff9.css.map",
-    "main.894c04b8.js.map": "/Portfolio/static/js/main.894c04b8.js.map"
+    "main.css": "/JamesWithLeo/Portfolio/static/css/main.3a6c3ee9.css",
+    "main.js": "/JamesWithLeo/Portfolio/static/js/main.9815e640.js",
+    "static/media/melhotelApp-ss1.png": "/JamesWithLeo/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
+    "static/media/melbakeApp-ss1.png": "/JamesWithLeo/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
+    "static/media/me.jpg": "/JamesWithLeo/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
+    "static/media/Gluten-VariableFont_slnt,wght.ttf": "/JamesWithLeo/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
+    "static/media/Silkscreen-Regular.ttf": "/JamesWithLeo/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
+    "static/media/TodoApp-ss1.png": "/JamesWithLeo/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
+    "index.html": "/JamesWithLeo/Portfolio/index.html",
+    "main.3a6c3ee9.css.map": "/JamesWithLeo/Portfolio/static/css/main.3a6c3ee9.css.map",
+    "main.9815e640.js.map": "/JamesWithLeo/Portfolio/static/js/main.9815e640.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab294ff9.css",
-    "static/js/main.894c04b8.js"
+    "static/css/main.3a6c3ee9.css",
+    "static/js/main.9815e640.js"
   ]
 }
