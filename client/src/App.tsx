@@ -171,6 +171,7 @@ function App() {
         />
         <Project
           title={"Mel Bakes"}
+          liveDemo="https://mel-bakes.onrender.com"
           duration="2 months, still on developement, 2024"
           repo="https://github.com/JamesWithLeo/Mel-Bakes"
           appImg={melbakeImg}
