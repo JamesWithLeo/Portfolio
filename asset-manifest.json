@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.ab294ff9.css",
-    "main.js": "/Portfolio/static/js/main.34f3f989.js",
+    "main.js": "/Portfolio/static/js/main.5890e597.js",
     "static/media/melhotelApp-ss1.png": "/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
     "static/media/melbakeApp-ss1.png": "/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
+    "static/media/hardware.png": "/Portfolio/static/media/hardware.eb6622d9377926cd0bf2.png",
     "static/media/me.jpg": "/Portfolio/static/media/me.9ccfb08888dbaff8c357.jpg",
     "static/media/Gluten-VariableFont_slnt,wght.ttf": "/Portfolio/static/media/Gluten-VariableFont_slnt,wght.f779a8325cbf67c1d309.ttf",
     "static/media/Silkscreen-Regular.ttf": "/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
     "static/media/TodoApp-ss1.png": "/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
     "index.html": "/Portfolio/index.html",
     "main.ab294ff9.css.map": "/Portfolio/static/css/main.ab294ff9.css.map",
-    "main.34f3f989.js.map": "/Portfolio/static/js/main.34f3f989.js.map"
+    "main.5890e597.js.map": "/Portfolio/static/js/main.5890e597.js.map"
   },
   "entrypoints": [
     "static/css/main.ab294ff9.css",
-    "static/js/main.34f3f989.js"
+    "static/js/main.5890e597.js"
   ]
 }
