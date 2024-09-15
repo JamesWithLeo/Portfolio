@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://github.com/JamesWithLeo/Portfolio",
+  "homepage": "https://JamesWithLeo.github.io/Portfolio",
   "version": "0.1.0",
   "private": false,
   "proxy": "http://localhost:2424",

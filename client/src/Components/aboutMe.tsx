@@ -6,7 +6,7 @@ export default function AboutMe() {
         goals. Just like others, I love tea and{" "}
         <span className="cursor-default underline">music</span>. Other than
         that, I’m a homebody, meaning I’m not an active person. I’d rather stay
-        inside my house scrolling through my phone or coding websites
+        inside my house scrolling through my phone or coding websites.
       </p>
     </>
   );

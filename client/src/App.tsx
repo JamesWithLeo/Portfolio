@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import todoImg from "./assets/images/TodoApp-ss1.png";
 import melbakeImg from "./assets/images/melbakeApp-ss1.png";
 import melhotelImg from "./assets/images/melhotelApp-ss1.png";
+import hardwareImg from "./assets/images/hardware.png"
 import {
   faGithub,
   faFacebook,
@@ -147,6 +148,15 @@ function App() {
         <h1 className="w-full p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white ">
           Projects {">"}
         </h1>
+        <Project title="Hardware Management system" repo="https://github.com/JamesWithLeo/codey" liveDemo="https://codey-roan.vercel.app/" appImg={hardwareImg} 
+          content={
+            <span className="mb-2 w-full text-left font-mono text-sm font-light text-darkPrimary dark:text-stone-400">
+            Next.js project. Featuring product search, paginations and auth using.
+            <TechnolgyLink href="https://next-auth.js.org/" target="NextAuth" />.
+            <br />
+            The ui is inspired to <TechnolgyLink target="Airbnb" href="https://www.airbnb.com/"/>.
+            </span>}
+        />
         <Project
           title="Mel Hotel"
           repo="https://github.com/JamesWithLeo/Mel-Hotel"
@@ -165,7 +175,7 @@ function App() {
                 href="https://www.material-react-table.com/"
                 target="MRT"
               />
-              for tables and MongoDb for database
+              for tables and MongoDb for database.
             </span>
           }
         />
