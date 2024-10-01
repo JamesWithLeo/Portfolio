@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.00b35c54.css",
-    "main.js": "/Portfolio/static/js/main.b9109981.js",
+    "main.css": "/Portfolio/static/css/main.f2bcee31.css",
+    "main.js": "/Portfolio/static/js/main.b2525c43.js",
     "static/media/melhotelApp-ss1.png": "/Portfolio/static/media/melhotelApp-ss1.60e064caf671d2703f7f.png",
     "static/media/melbakeApp-ss1.png": "/Portfolio/static/media/melbakeApp-ss1.68dc46019a75ab5b097f.png",
     "static/media/hardware.png": "/Portfolio/static/media/hardware.eb6622d9377926cd0bf2.png",
@@ -10,11 +10,11 @@
     "static/media/Silkscreen-Regular.ttf": "/Portfolio/static/media/Silkscreen-Regular.e7e896209cf39b6670df.ttf",
     "static/media/TodoApp-ss1.png": "/Portfolio/static/media/TodoApp-ss1.ad13fe5dc6ffe7508f06.png",
     "index.html": "/Portfolio/index.html",
-    "main.00b35c54.css.map": "/Portfolio/static/css/main.00b35c54.css.map",
-    "main.b9109981.js.map": "/Portfolio/static/js/main.b9109981.js.map"
+    "main.f2bcee31.css.map": "/Portfolio/static/css/main.f2bcee31.css.map",
+    "main.b2525c43.js.map": "/Portfolio/static/js/main.b2525c43.js.map"
   },
   "entrypoints": [
-    "static/css/main.00b35c54.css",
-    "static/js/main.b9109981.js"
+    "static/css/main.f2bcee31.css",
+    "static/js/main.b2525c43.js"
   ]
 }
