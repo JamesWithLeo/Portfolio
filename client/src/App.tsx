@@ -137,7 +137,6 @@ function App() {
         <div className="absolute left-[78%] top-[600px] hidden h-16 w-16 border border-stone-200 shadow-inner md:block dark:hidden" />
         <div className="absolute left-[74%] top-[600px] hidden h-8 w-8 border border-stone-200 bg-stone-50 shadow-inner md:block dark:hidden" />
 
-        {/* div shortcut */}
         <div className="fixed right-10 z-10 hidden flex-col gap-3 md:flex">
           <a href="#top">
             <div className="h-3 w-3 rounded-sm bg-white shadow shadow-darkPrimary active:shadow-inner active:shadow-darkPrimary dark:rounded-full dark:bg-darkPrimary dark:shadow-white dark:active:shadow-white" />
@@ -161,10 +160,10 @@ function App() {
         id="projects"
       >
         <h1 className="w-full p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white ">
-          Projects {">"}
+          # Projects
         </h1>
         <div
-          className="flex snap-x snap-mandatory gap-8 overflow-x-hidden scroll-smooth p-2 px-12"
+          className="flex touch-pan-x snap-x snap-mandatory gap-8 overflow-x-hidden scroll-smooth p-2 px-12"
           id="project-carousel"
         >
           <Project
@@ -174,13 +173,21 @@ function App() {
             appImg={hardwareImg}
             content={
               <span className="mb-2 w-full text-left font-mono text-sm font-light text-darkPrimary dark:text-stone-400">
-                Next.js project. Featuring product search, paginations and auth
+                Next.js project Featuring product search, pagination and auth
                 using.
                 <TechnolgyLink
                   href="https://next-auth.js.org/"
                   target="NextAuth"
                 />
-                ,with vercel postgres for data harehousing.
+                ,with
+                <br />
+                <TechnolgyLink
+                  href="https://vercel.com/storage/postgres"
+                  target="
+                 vercel postgres
+                 "
+                />
+                for data harehousing.
                 <br />
                 The ui is inspired to{" "}
                 <TechnolgyLink target="Airbnb" href="https://www.airbnb.com/" />
@@ -199,8 +206,16 @@ function App() {
                 Authorizaton with the help of{" "}
                 <TechnolgyLink href="https://redux.js.org/" target="redux" />,
                 <TechnolgyLink href="https://leafletjs.com/" target="Leaflet" />
-                for Mapping. Other technolgy used: ReactJs with typescript,
-                NodeJs with typescript, Express,
+                for Mapping. Other technolgy used:{" "}
+                <TechnolgyLink href="https://react.dev/" target="react" />,
+                <TechnolgyLink
+                  href="https://www.typescriptlang.org/"
+                  target="typescript"
+                />
+                ,<TechnolgyLink href="https://nodejs.org/en" target="Node.js" />{" "}
+                with{" "}
+                <TechnolgyLink href="https://expressjs.com/" target="Express" />
+                ,
                 <TechnolgyLink href="https://axios-http.com/" target="axios" />,
                 <TechnolgyLink
                   href="https://www.material-react-table.com/"
@@ -218,8 +233,19 @@ function App() {
             appImg={melbakeImg}
             content={
               <span className="mb-2 w-full text-left font-mono text-sm font-light text-darkPrimary dark:text-stone-400">
-                My first Ever E-commerce website created using MongoDb, express,
-                React, Node JS,{" "}
+                My first Ever E-commerce website created using{" "}
+                <TechnolgyLink
+                  href="https://www.mongodb.com/"
+                  target="MongoDb"
+                />
+                ,
+                <TechnolgyLink href="https://expressjs.com/" target="Express" />
+                ,
+                <TechnolgyLink href="https://react.dev/" target="react" />,
+                <TechnolgyLink
+                  href="https://nodejs.org/en"
+                  target="Node.js"
+                />, <br />
                 <TechnolgyLink
                   target="TanStack Query"
                   href="https://tanstack.com/query/latest"
@@ -294,10 +320,9 @@ function App() {
       </div>
 
       <div className="flex h-max w-full max-w-7xl flex-col items-center justify-center gap-y-8 pb-32 pt-16  dark:bg-darkPrimary">
-        <h1 className="w-full p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white">
-          About Me {">"}
+        <h1 className="w-full  p-4 font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:px-12 lg:text-4xl dark:text-white">
+          # About Me
         </h1>
-        {/* bg-[#8294C4] */}
         <div className="flex h-full flex-col gap-8 border border-stone-200 bg-stone-50 p-8 text-darkPrimary shadow-inner md:w-[90%] lg:px-8 dark:border-none dark:bg-darkPrimary dark:text-white">
           <div className="h-0.5 w-3/4 dark:bg-red-500 "></div>
           <AboutMe />

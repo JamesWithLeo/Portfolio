@@ -6,7 +6,6 @@ module.exports = {
     extend: {
       screens: {
         sm: "430px",
-        // => @media (min-width: 640px) { ... }
       },
       colors: {
         darkContrast: '#ef4444',
@@ -21,10 +20,12 @@ module.exports = {
     }, keyframes: {
       slide: {
         '0%': {
-          transform: 'translateX(0)'
+          transform: 'scaleY(1)',
+          transform: 'scaleX(1)'
         },
         '100%': {
-          transform: 'translateX(27rem)'
+          transform: 'scaleY(1.3)',
+          transform: 'scaleX(1.3)'
         }
       }
     }
