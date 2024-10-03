@@ -3,6 +3,6 @@
     "lib": [
       "DOM"
     ],
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   }
 }

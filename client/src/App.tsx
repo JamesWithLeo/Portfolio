@@ -183,9 +183,7 @@ function App() {
                 <br />
                 <TechnolgyLink
                   href="https://vercel.com/storage/postgres"
-                  target="
-                 vercel postgres
-                 "
+                  target="vercel postgres"
                 />
                 for data harehousing.
                 <br />
