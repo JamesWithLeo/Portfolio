@@ -23,7 +23,7 @@ export default function Project({
   return (
     <main
       id="projectCard"
-      className="group h-max w-full min-w-96 max-w-sm snap-center md:snap-align-none"
+      className="min-w-42 group h-max w-full max-w-sm snap-center md:snap-align-none"
       // className="group flex h-max w-full max-w-96 flex-col justify-between gap-2
       // bg-light100 px-4 py-5 shadow-lg outline-dashed outline-darkPrimary delay-200 duration-200 ease-linear hover:scale-[1.03] hover:bg-white focus:scale-[1.03] focus:bg-white focus:outline dark:rounded-md dark:bg-dark900 dark:shadow-xl dark:shadow-stone-800 dark:hover:bg-dark600 dark:focus:bg-dark600"
     >
@@ -46,12 +46,7 @@ export default function Project({
           </div>
           {content}
         </div>
-        <div className="flex-col gap-2 group-hover:flex md:hidden">
-          {duration ? (
-            <p className="mt-auto w-full text-left text-xs text-stone-500">
-              {duration}
-            </p>
-          ) : null}
+        <div className="flex flex-col gap-2">
           <div className="flex w-full gap-2">
             <a
               target="_"
@@ -62,18 +57,17 @@ export default function Project({
               Source code
               <FontAwesomeIcon icon={faGithub} className="ml-2 text-sm" />
             </a>
-            <>
-              {!liveDemo ? null : (
-                <a
-                  target="_"
-                  href={liveDemo}
-                  className="flex w-max items-center border  border-none bg-contrast px-2 py-2 text-left text-xs text-white  dark:rounded-sm dark:bg-darkContrast dark:text-white"
-                >
-                  Live demo
-                  <FontAwesomeIcon icon={faPlay} className="ml-2 text-sm" />
-                </a>
-              )}
-            </>
+
+            {!liveDemo ? null : (
+              <a
+                target="_"
+                href={liveDemo}
+                className="flex w-max items-center border  border-none bg-contrast px-2 py-2 text-left text-xs text-white  dark:rounded-sm dark:bg-darkContrast dark:text-white"
+              >
+                Live demo
+                <FontAwesomeIcon icon={faPlay} className="ml-2 text-sm" />
+              </a>
+            )}
           </div>
         </div>
       </div>
