@@ -7,11 +7,12 @@ import chatAppImg from "../../assets/images/we-chat.png";
 import TechnolgyLink from "../technologyLink";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function Projects() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   const [isSwitched, setIsSwitched] = useState<boolean>(false);
-
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
   const showMore = () => {
     setIsCollapsed(true);
     const parent = document.getElementById("project-parent") as HTMLDivElement;
@@ -25,41 +26,39 @@ export default function Projects() {
       "relative grid max-h-[38rem] grid-cols-1 gap-8 overflow-hidden scroll-smooth p-2 px-12 md:grid-cols-2 lg:grid-cols-3";
   };
 
-  const handleProjectClick = () => {
-    setIsSwitched(!isSwitched);
-  };
-  const handleContributionClick = () => {
-    setIsSwitched(!isSwitched);
-  };
   return (
     <div
       className="flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-8 pb-32 pt-16"
       id="projects"
     >
-      <div className="flex w-full gap-8 p-4 lg:px-12">
+      <div className="flex w-full gap-8 p-4 lg:px-12 ">
         <h1 className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white ">
           #
         </h1>
-        <motion.button
-          onClick={handleProjectClick}
-          className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white "
-          animate={{
-            opacity: isSwitched ? 0.5 : 1,
-            x: isSwitched ? "160%" : "0%",
-          }}
-        >
-          Projects
-        </motion.button>
-        <motion.button
-          onClick={handleContributionClick}
-          className="font-[silkscreen]  text-2xl text-darkPrimary opacity-20 md:text-3xl lg:text-4xl dark:text-white"
-          animate={{
-            opacity: isSwitched ? 1 : 0.5,
-            x: isSwitched ? "-80%" : "0%",
-          }}
-        >
-          contribution
-        </motion.button>
+        <div className="flex w-full flex-col items-start gap-2 md:flex-row md:gap-8">
+          <motion.button
+            onClick={() => setIsSwitched(!isSwitched)}
+            className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white "
+            animate={{
+              opacity: isSwitched ? 0.5 : 1,
+              x: isSwitched && !isSmallScreen ? "160%" : "0%",
+              y: isSmallScreen && isSwitched ? "140%" : "0%",
+            }}
+          >
+            Projects
+          </motion.button>
+          <motion.button
+            onClick={() => setIsSwitched(!isSwitched)}
+            className="font-[silkscreen]  text-2xl text-darkPrimary opacity-20 md:text-3xl lg:text-4xl dark:text-white"
+            animate={{
+              opacity: isSwitched ? 1 : 0.5,
+              x: isSwitched && !isSmallScreen ? "-80%" : "0%",
+              y: isSmallScreen && isSwitched ? "-125%" : "0%",
+            }}
+          >
+            contribution
+          </motion.button>
+        </div>
       </div>
 
       <div
@@ -75,14 +74,17 @@ export default function Projects() {
               appImg={chatAppImg}
               content={
                 <span className="mb-2 w-full text-left font-mono text-xs font-light text-darkPrimary dark:text-stone-400">
-                  This is a front-end chat application originally forked from
+                  I developed a chat application by forking the front-end from
                   <TechnolgyLink
                     href="https://github.com/DulanjaliSenarathna/react-chat-app"
                     target="DulanjaliSenarathna/react-chat-app"
                   />
-                  , where I extended the functionality and built a
-                  fully-featured backend. The project combines a React-based
-                  front end with a{" "}
+                  , While the original front-end provided a solid foundation, I
+                  enhanced it by adding real-time chat functionality using
+                  Socket.IO and integrated Redux for state management. I also
+                  converted the entire front-end to TypeScript to improve type
+                  safety and maintainability. For the back-end, I built a custom
+                  solution from scratch using
                   <TechnolgyLink
                     href="https://nodejs.org/en"
                     target="Node.js"
