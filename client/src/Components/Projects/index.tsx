@@ -141,7 +141,7 @@ export default function Projects() {
         }
       />
 
-      <div className=" absolute bottom-0 z-10 col-span-2 flex w-full items-center justify-center bg-gradient-to-t from-light pb-8 pt-16 dark:from-darkPrimary">
+      <div className=" absolute bottom-0 z-10 col-span-2 flex w-full items-center justify-center bg-gradient-to-t from-light  pb-8 pt-16 dark:from-darkPrimary">
         {isCollapsed ? (
           <button
             onClick={showLess}
