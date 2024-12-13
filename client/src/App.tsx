@@ -18,6 +18,8 @@ import Name from "./Components/Name";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
+import { motion } from "framer-motion";
+
 function App() {
   const theme = ThemeConsumer();
   const [hoverHero, setHoverHero] = useState<Boolean>(false);
@@ -134,23 +136,7 @@ function App() {
         )}
       </main>
 
-      <div
-        className="flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-8 pb-32 pt-16"
-        id="projects"
-      >
-        <div className="flex w-full gap-8 p-4 lg:px-12">
-          <h1 className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white ">
-            #
-          </h1>
-          <h1 className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white ">
-            Projects
-          </h1>
-          <button className="font-[silkscreen]  text-2xl text-darkPrimary opacity-20 md:text-3xl lg:text-4xl dark:text-white">
-            contribution
-          </button>
-        </div>
-        <Projects />
-      </div>
+      <Projects />
       <About />
 
       {hoverRateMe ? <Rate setDisplay={setHoverRateMe} /> : null}
