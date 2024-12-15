@@ -40,7 +40,7 @@ export default function Projects() {
             onClick={() => setIsSwitched(!isSwitched)}
             className="font-[silkscreen] text-2xl text-darkPrimary md:text-3xl lg:text-4xl dark:text-white "
             animate={{
-              opacity: isSwitched ? 0.5 : 1,
+              opacity: isSwitched ? 0.3 : 1,
               x: isSwitched && !isSmallScreen ? "160%" : "0%",
               y: isSmallScreen && isSwitched ? "140%" : "0%",
             }}
@@ -49,9 +49,9 @@ export default function Projects() {
           </motion.button>
           <motion.button
             onClick={() => setIsSwitched(!isSwitched)}
-            className="font-[silkscreen]  text-2xl text-darkPrimary opacity-20 md:text-3xl lg:text-4xl dark:text-white"
+            className="font-[silkscreen]  text-2xl text-darkPrimary  md:text-3xl lg:text-4xl dark:text-white"
             animate={{
-              opacity: isSwitched ? 1 : 0.5,
+              opacity: isSwitched ? 1 : 0.3,
               x: isSwitched && !isSmallScreen ? "-80%" : "0%",
               y: isSmallScreen && isSwitched ? "-125%" : "0%",
             }}

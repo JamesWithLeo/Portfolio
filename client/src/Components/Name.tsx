@@ -1,142 +1,137 @@
+import { Variants, motion } from "framer-motion";
+
 export default function Name() {
+  const letterContainerVariant: Variants = {
+    animate: {
+      transition: {
+        repeat: Infinity,
+        repeatType: "loop",
+        staggerChildren: 0.5, // Stagger the animation for each child
+      },
+    },
+  };
+  const letterVariant: Variants = {
+    animate: {
+      scale: [1, 1.5, 1], // Scale up to 1.5 and back to 1
+      transition: {
+        duration: 0.5, // Total duration of the scale animation
+        ease: "easeInOut", // Smooth animation
+      },
+    },
+  };
+  const helloMsg = ["H", "E", "L", "L", "O"];
+  const name = ["J", "A", "M", "E", "S"];
   return (
     <>
-      <div className="flex justify-center gap-4 md:justify-start">
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            H
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            L
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            L
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            O
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:-translate-y-2 dark:hover:bg-[#272121]">
-            ,
-          </h1>
+      <motion.main
+        variants={letterContainerVariant}
+        animate="animate"
+        className="flex flex-col gap-3"
+      >
+        <div className="flex justify-center gap-4 md:justify-start">
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            {helloMsg.map((letter, index) => (
+              <motion.h1
+                variants={letterVariant}
+                className="w-max dark:text-white "
+              >
+                {letter}
+              </motion.h1>
+            ))}
+            <h1 className="w-max  delay-200 duration-200 ease-linear  dark:text-white ">
+              ,
+            </h1>
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            <motion.h1
+              variants={letterVariant}
+              className="w-max  dark:text-white "
+            >
+              I
+            </motion.h1>
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            <motion.h1
+              variants={letterVariant}
+              className="w-max   dark:text-white"
+            >
+              A
+            </motion.h1>
+            <motion.h1
+              variants={letterVariant}
+              className="w-max   dark:text-white  "
+            >
+              M
+            </motion.h1>
+          </div>
         </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            I
-          </h1>
-        </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            A
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            M
-          </h1>
-        </div>
-      </div>
-      <div className="flex justify-center gap-4 md:justify-start">
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-5xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            J
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            A
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            M
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            S
-          </h1>
-          <h1 className="hidden w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none md:block dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            .
-          </h1>
-        </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:hidden md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            L
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            O
-          </h1>
-        </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:hidden md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            O
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            C
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            A
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            M
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            P
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            O
-          </h1>
-        </div>
-      </div>
 
-      <div className="flex justify-center gap-4 md:justify-start">
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="hover:-translate-y-2] w-max shadow delay-200 duration-200 ease-linear hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            A
-          </h1>
+        <div className="flex justify-center gap-4 md:justify-start">
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-5xl dark:font-[Gluten]">
+            {name.map((letter, index) => (
+              <motion.h1
+                variants={letterVariant}
+                className="w-max  dark:text-white"
+              >
+                {letter}
+              </motion.h1>
+            ))}
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-5xl dark:font-[Gluten]">
+            {["L", "E", "O"].map((letter) => (
+              <motion.h1
+                variants={letterVariant}
+                className="w-max  dark:text-white "
+              >
+                {letter}
+              </motion.h1>
+            ))}
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:hidden md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            {["O", "C", "A", "M", "P", "O"].map((letter, _) => (
+              <motion.h1
+                variants={letterVariant}
+                className="w-max  dark:text-white "
+              >
+                {letter}
+              </motion.h1>
+            ))}
+          </div>
         </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            W
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            B
-          </h1>
+
+        <div className="flex justify-center gap-4 md:justify-start">
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            <motion.h1
+              variants={letterVariant}
+              className=" w-max  dark:text-white "
+            >
+              A
+            </motion.h1>
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            {["W", "E", "B"].map((letter, index) => (
+              <motion.h1
+                variants={letterVariant}
+                className="w-max  dark:text-white "
+              >
+                {letter}
+              </motion.h1>
+            ))}
+          </div>
+          <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
+            {["D", "E", "V", "E", "L", "O", "P", "E", "R"].map(
+              (letter, index) => (
+                <motion.h1
+                  variants={letterVariant}
+                  className="w-max  dark:text-white "
+                >
+                  {letter}
+                </motion.h1>
+              ),
+            )}
+          </div>
         </div>
-        <div className="flex cursor-default gap-1 text-center font-[silkscreen] text-darkPrimary md:text-3xl lg:text-4xl dark:font-[Gluten]">
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            D
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            V
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            L
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            O
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            P
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            E
-          </h1>
-          <h1 className="w-max shadow delay-200 duration-200 ease-linear hover:-translate-y-2 hover:scale-[1.5] hover:shadow-none dark:text-white dark:shadow-[#272121] dark:hover:bg-[#272121]">
-            R
-          </h1>
-        </div>
-      </div>
+      </motion.main>
     </>
   );
 }

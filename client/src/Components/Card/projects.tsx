@@ -24,8 +24,8 @@ export default function Project({
     <main
       id="projectCard"
       className="min-w-42 group h-max w-full max-w-sm snap-center md:snap-align-none"
-      // className="group flex h-max w-full max-w-96 flex-col justify-between gap-2
-      // bg-light100 px-4 py-5 shadow-lg outline-dashed outline-darkPrimary delay-200 duration-200 ease-linear hover:scale-[1.03] hover:bg-white focus:scale-[1.03] focus:bg-white focus:outline dark:rounded-md dark:bg-dark900 dark:shadow-xl dark:shadow-stone-800 dark:hover:bg-dark600 dark:focus:bg-dark600"
+      // className="group flex h-full w-full max-w-96 flex-col
+      // justify-between gap-2 bg-light100 px-4 py-5 shadow-lg outline-dashed outline-darkPrimary delay-200 duration-200 ease-linear hover:scale-[1.03] hover:bg-white focus:scale-[1.03] focus:bg-white focus:outline dark:rounded-md dark:bg-dark900 dark:shadow-xl dark:shadow-stone-800 dark:hover:bg-dark600 dark:focus:bg-dark600"
     >
       {appImg ? (
         <div className="h-auto w-full bg-stone-100 delay-200 duration-200 ease-linear">

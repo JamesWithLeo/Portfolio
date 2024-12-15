@@ -6,8 +6,7 @@ import {
   faFacebook,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
-import { faLightbulb as faDarkbulb } from "@fortawesome/free-solid-svg-icons";
+
 import SvgComponent from "./SvgComponent";
 import me from "./assets/me.jpg";
 import { useState } from "react";
@@ -18,7 +17,7 @@ import Name from "./Components/Name";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
-import { motion } from "framer-motion";
+import Header from "./Components/Header";
 
 function App() {
   const theme = ThemeConsumer();
@@ -27,42 +26,10 @@ function App() {
 
   return (
     <div className="box-border flex h-auto w-full flex-col items-center bg-light dark:bg-darkPrimary">
-      <header className="sticky top-0 z-20 flex h-16 w-full flex-col items-center bg-light px-4 shadow dark:bg-dark900">
-        <div className="flex h-full w-full max-w-7xl items-center justify-between text-white">
-          <>
-            <div></div>
-
-            <button
-              className="h-max w-max dark:hidden"
-              onClick={() => {
-                theme.setToDark();
-                document.body.className = "dark";
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faDarkbulb}
-                className="h-7 w-7 text-darkPrimary"
-              />
-            </button>
-            <button
-              className="hidden h-max w-max dark:block"
-              onClick={() => {
-                theme.setToLight();
-                document.body.className = "light";
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faLightbulb}
-                className="h-7 w-7 text-white"
-              />
-            </button>
-          </>
-        </div>
-      </header>
-
       <div className="z-10 hidden bg-transparent dark:block">
         {theme.theme === "light" ? null : <SvgComponent />}
       </div>
+      <Header />
       <main className="flex max-h-[1000px] w-full max-w-7xl flex-col-reverse items-center md:flex-row lg:h-screen dark:bg-darkPrimary">
         <div className="z-10 flex h-max grid-cols-5 flex-col-reverse items-center gap-8 py-8 md:grid md:w-1/2 lg:pl-4">
           <div
@@ -135,7 +102,6 @@ function App() {
           </div>
         )}
       </main>
-
       <Projects />
       <About />
 
